@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Pretendard 폰트 (CDN) -->
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+  />
+  <!-- Tailwind (Vite 환경이라면 빌드 후 자동 삽입되거나, dev 모드로 실행됩니다) -->
+  <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+  />
+  <script type="module" crossorigin src="/assets/index-BwVAWlId.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-CecRzAf4.css">
+</head>
+<body class="font-sans bg-gray-50 text-gray-900">
+
+<div id="app" class="container mx-auto p-4">
+  <!-- 글 작성 섹션 -->
+  <section class="mb-8">
+    <form id="writeForm" class="space-y-4 bg-white p-4 border border-gray-300 shadow rounded-md">
+      <!-- 스터디 주제 -->
+      <div>
+        <label for="studySubject" class="block font-semibold mb-1">제목</label>
+        <input
+                id="studySubject"
+                type="text"
+                class="w-full p-2 border border-gray-300 focus:outline-none"
+                placeholder="예) React 기초 스터디 같이 하실 분 모집합니다."
+                required
+        />
+      </div>
+
+      <!-- 스터디 목표 -->
+      <div>
+        <label for="studyGoal" class="block font-semibold mb-1">스터디 목표🎯</label>
+        <input
+                id="studyGoal"
+                type="text"
+                class="w-full p-2 border border-gray-300 focus:outline-none"
+                placeholder="예) React 프로젝트 완성"
+                required
+        />
+      </div>
+
+      <!-- 스터디 일정 -->
+      <div>
+        <label for="studySchedule" class="block font-semibold mb-1">예상 스터디 일정📆</label>
+        <input
+                id="studySchedule"
+                type="text"
+                class="w-full p-2 border border-gray-300 focus:outline-none"
+                placeholder="예) 주 1회, 총 4주"
+        />
+      </div>
+
+      <!-- 커리큘럼 -->
+      <div>
+        <label for="studyCurriculum" class="block font-semibold mb-1">예상 커리큘럼 간략히🏫</label>
+        <textarea
+                id="studyCurriculum"
+                class="w-full p-2 border border-gray-300 focus:outline-none"
+                rows="3"
+                placeholder="예) 1주차 - JSX 기초, 2주차 - 컴포넌트, 3주차 - 상태관리, 4주차 - 프로젝트 완성"
+        ></textarea>
+      </div>
+
+      <!-- 모집인원 -->
+      <div>
+        <label for="studyMembers" class="block font-semibold mb-1">예상 모집인원</label>
+        <input
+                id="studyMembers"
+                type="text"
+                class="w-full p-2 border border-gray-300 focus:outline-none"
+                placeholder="예) 5명"
+        />
+      </div>
+
+      <!-- 소개 및 개설 이유 -->
+      <div>
+        <label for="studyIntro" class="block font-semibold mb-1">스터디 소개와 개설 이유</label>
+        <textarea
+                id="studyIntro"
+                class="w-full p-2 border border-gray-300 focus:outline-none"
+                rows="3"
+                placeholder="스터디를 시작하게 된 계기, 목적 등을 적어주세요."
+        ></textarea>
+      </div>
+
+      <!-- 주의사항 -->
+      <div>
+        <label for="studyNotice" class="block font-semibold mb-1">스터디 관련 주의사항</label>
+        <textarea
+                id="studyNotice"
+                class="w-full p-2 border border-gray-300 focus:outline-none"
+                rows="3"
+                placeholder="예) 지각 금지, 주차별 과제 필수 등"
+        ></textarea>
+      </div>
+
+      <!-- 지원 방법 -->
+      <div>
+        <label for="studyContact" class="block font-semibold mb-1">스터디 지원 방법</label>
+        <input
+                id="studyContact"
+                type="text"
+                class="w-full p-2 border border-gray-300 focus:outline-none"
+                placeholder="이메일, 오픈채팅 링크 등"
+        />
+      </div>
+
+      <!-- 등록 버튼 -->
+      <button
+              type="submit"
+              class="border border-gray-500 px-4 py-2 hover:bg-gray-100"
+      >
+        글 등록하기
+      </button>
+    </form>
+  </section>
+
+  <!-- 등록된 게시글 섹션 -->
+  <section>
+    <div id="postList" class="space-y-6"></div>
+  </section>
+</div>
+
+<!-- main.js 로직 -->
+</body>
+</html>
